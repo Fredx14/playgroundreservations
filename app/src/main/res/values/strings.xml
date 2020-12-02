@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Booking</string>
+    <string name="signup">SIgn Up</string>
+
+
+    <string name="signuphere">signup here</string>
+
+    <string name="top_icon">top icon</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">forgot password</string>
+    <string name="or">or</string>
+    <string name="google_icon">google</string>
+    <string name="facebook_icon">facebook</string>
+    <string name="new_user_register_now">new user?register now!</string>
+    <string name="fullname">fullname</string>
+    <string name="phone">phone</string>
+    <string name="address">address</string>
+    <string name="contact">contact us</string>
+    <string name="login_here">Have an Account? Login Now</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="Reserve">Reserve</string>
+    <string name="register_here">Register Here!</string>
+
+    <string name="open">Open</string>
+    　　　
+    <string name="close">Close</string>
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".ReservationList">
+    <TextView
+        android:id="@+id/myDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chose your Date"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="23sp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="48dp"
+
+        />
+    <LinearLayout
+        android:background="@drawable/bg_calen"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="48dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TableLayout
+        android:id="@+id/reservations_table"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Date"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:width="120dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="05:00"
+                android:textColor="#FFF"
+
+                android:width="100dp"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="07:00"
+                android:textColor="#FFF"
+
+                android:width="100dp"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="09:00"
+                android:textColor="#FFF"
+
+                android:width="100dp"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+
+        android:layout_marginTop="120dp"
+        android:background="@drawable/bg_btn"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="confirm booking"
+        android:textColor="#FFF" />
+
+</LinearLayout>
