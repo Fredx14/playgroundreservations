@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClientInstance {
     private static Retrofit retrofit;
-    private static final String BASE_URL = "http://192.168.8.150/playground_reservation/";
+    private static final String BASE_URL = "http://192.168.43.152/playground_reservation/";
 
 
 

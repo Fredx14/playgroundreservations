@@ -2,9 +2,11 @@ package com.example.booking;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -65,21 +67,30 @@ public class Login extends AppCompatActivity {
                             data[0] = email;
                             data[1] = password;
 
-                            PutData putData = new PutData("http://192.168.8.150/playgr1ound_reservation/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.43.152/playground_reservation/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
-                                    if (result.equals("Login Success")){
-                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                                        startActivity(intent);
-                                        finish();
 
-                                    }
-                                    else {
-                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
-                                    }
+                                    SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                    SharedPreferences.Editor editor = sharedPref.edit();
+                                    editor.putString("user", result);
+                                    editor.apply();
+                                    /*  ./SharedPreferences  */
+                                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                    startActivity(intent);
+
+//                                    if (result.equals("Login Success")){
+//                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
+//                                        Intent intent  = new Intent(getApplicationContext(),MainActivity.class);
+//                                        startActivity(intent);
+//                                        finish();
+//
+//                                    }
+//                                    else {
+//                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
+//                                    }
                                     //End ProgressBar (Set visibility to GONE)
 
                                 }
