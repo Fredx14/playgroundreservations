@@ -1,7 +1,9 @@
 package com.example.booking.network;
 
+import com.example.booking.MyReservation;
 import com.example.booking.models.Reservation;
 import com.example.booking.models.Reserve;
+import com.example.booking.models.UserReservation;
 
 import java.util.List;
 
@@ -24,5 +26,16 @@ public interface GetDataService {
             @Query("date") String date,
             @Query("time") String time,
             @Query("user_id") String user_id
+    );
+
+    @POST("myreservations.php")
+    Call<List<UserReservation>> myReservations(
+            @Query("user_id") String user_id
+    );
+
+    @POST("cancelreservation.php")
+    Call<List<UserReservation>> cancelReservation(
+            @Query("user_id") String user_id,
+            @Query("reservation_id") String reservation_id
     );
 }

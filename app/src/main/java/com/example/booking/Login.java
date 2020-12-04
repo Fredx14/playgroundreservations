@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity {
                             data[0] = email;
                             data[1] = password;
 
-                            PutData putData = new PutData("http://192.168.43.152/playground_reservation/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.8.106/playground_reservation/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
